@@ -1,0 +1,161 @@
+/* Página H5 - Estilos Modernos */
+
+.services-h5-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Loading Container */
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 80rpx;
+  height: 80rpx;
+  border: 6rpx solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 30rpx;
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 2rpx;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Web View */
+web-view {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+/* Error Container */
+.error-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  padding: 60rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.error-icon {
+  font-size: 120rpx;
+  margin-bottom: 30rpx;
+  opacity: 0.6;
+}
+
+.error-text {
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 50rpx;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.retry-btn {
+  min-width: 240rpx;
+  height: 88rpx;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6rpx 20rpx rgba(37, 211, 102, 0.3);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.retry-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.retry-btn:active::before {
+  width: 300%;
+  height: 300%;
+}
+
+.retry-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 3rpx 10rpx rgba(37, 211, 102, 0.4);
+}
+
+.retry-btn text {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1rpx;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Smooth transitions */
+.loading-container,
+.error-container,
+web-view {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .error-text {
+    font-size: 28rpx;
+  }
+  
+  .retry-btn {
+    min-width: 200rpx;
+    height: 80rpx;
+  }
+}
+

@@ -1,0 +1,10 @@
+{
+  "subPackageBuildType": "shared",
+  "pages": [
+    "pages/index/index",
+    "pages/h5/h5"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

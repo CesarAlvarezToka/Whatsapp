@@ -1,0 +1,22 @@
+<view class="page-container">
+  <view class="header">
+    <view class="logo-container">
+      <text class="logo-icon">💬</text>
+    </view>
+    <text class="title">WhatsApp</text>
+    <text class="subtitle">Conéctate fácilmente</text>
+  </view>
+
+  <view class="content">
+    <view class="button-container">
+      <button class="whatsapp-button" onTap="handleWhatsApp">
+        <text class="button-text">Abrir WhatsApp</text>
+      </button>
+    </view>
+    
+    <view class="info-card">
+      <text class="info-title">¿Cómo funciona?</text>
+      <text class="info-text">Presiona el botón para abrir WhatsApp Web y comenzar a chatear</text>
+    </view>
+  </view>
+</view>
