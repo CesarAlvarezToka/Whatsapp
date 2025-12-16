@@ -1,7 +1,7 @@
 <view class="services-h5-container">
   <view a:if="{{isLoading}}" class="loading-container">
     <view class="loading-spinner"></view>
-    <text class="loading-text">Cargando servicio...</text>
+    <text class="loading-text">Loading service...</text>
   </view>
 
   <web-view
@@ -13,9 +13,9 @@
 
   <view a:if="{{!isLoading && !webviewUrl}}" class="error-container">
     <text class="error-icon">⚠️</text>
-    <text class="error-text">Servicio no disponible</text>
+    <text class="error-text">Service not available</text>
     <button class="retry-btn" onTap="onRetry">
-      <text>Reintentar</text>
+      <text>Retry</text>
     </button>
   </view>
 </view>

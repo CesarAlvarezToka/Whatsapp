@@ -1,4 +1,3 @@
-
 Page({
   data: {
     webviewUrl: '',
@@ -8,7 +7,7 @@ Page({
   async onLoad(options) {
     this.options = options;
 
-  
+
     this.setData({
       isLoading: true
     });
@@ -22,12 +21,12 @@ Page({
         });
         return;
       } catch (error) {
-        console.error('Error al procesar URL directa:', error);
+        console.error('Error processing direct URL:', error);
         this.setData({
           isLoading: false
         });
-        my.showToast({ 
-          content: 'Error al cargar el servicio. Por favor, intenta nuevamente.',
+        my.showToast({
+          content: 'Error loading service. Please try again.',
           type: 'fail'
         });
         return;
